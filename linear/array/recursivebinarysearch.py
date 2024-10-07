@@ -2,7 +2,7 @@ def binary_search_recursive(arr, target, lowindex, highindex):
 
     if lowindex > highindex:
         return -1
-    isascending = arr[highindex] > arr[lowindex]
+    isascending = arr[lowindex] < arr[highindex]
     midindex = (lowindex + highindex)//2
     guess =  arr[midindex]
     if guess == target:
@@ -23,7 +23,7 @@ def binary_search_recursive(arr, target, lowindex, highindex):
 
 arr = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
 arr = [9, 7, 5, 3, 1] 
-target = 71
+target = 7
 
 result = binary_search_recursive(arr, target, 0, len(arr) - 1)
 
